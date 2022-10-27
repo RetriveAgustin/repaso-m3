@@ -1,5 +1,3 @@
-const usersRouter = require("../routes/usersRouter");
-
 let users = [];
 let posts = [];
 
@@ -32,7 +30,7 @@ const createUser = (name, surname, age, mail) => {
     posts: [],
   };
 
-  user.push(newUser);
+  users.push(newUser);
   return newUser;
 };
 
@@ -55,6 +53,9 @@ const deleteUser = (id) => {
   users = users.filter(user => user.id !== id);
   return user;
 };
+
+let postId = 1;
+const createPost = () =>{}
 
 module.exports = {
   getUsers,
