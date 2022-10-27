@@ -1,13 +1,13 @@
 const express = require("express");
 const morgan = require("morgan");
+const usersRouter = require("./routes/usersRouter");
+const postsRouter = require("./routes/postsRouter");
 
 const server = express();
 server.use(express.json());
 server.use(morgan("dev"));
 
-const usersRouter = require("./routes/usersRouter");
 server.use("/users", usersRouter);
-const postsRouter = require("./routes/postsRouter");
 server.use("/posts", postsRouter);
 
 
