@@ -1,0 +1,18 @@
+[
+{
+    "id":"1",
+    "name":"Matías",
+    "surname":"Quiroga",
+    "age":"20",
+    "mail":"mquiroga@example.com",
+    "posts":[]
+},
+
+{
+    "id":"1",
+    "title":"post title",
+    "content":"post content",
+    "author":"author name",
+    "authorId":"user id"
+}
+]
