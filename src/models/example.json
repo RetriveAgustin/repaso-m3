@@ -11,7 +11,7 @@
 {
     "id":"1",
     "title":"post title",
-    "content":"post content",
+    "contents":"post content",
     "author":"author name",
     "authorId":"user id"
 }

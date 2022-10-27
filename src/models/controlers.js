@@ -50,12 +50,26 @@ const deleteUser = (id) => {
   const user = users.find((user) => user.id === id);
   if (!user) return { error: "user not found" };
 
-  users = users.filter(user => user.id !== id);
+  users = users.filter((user) => user.id !== id);
   return user;
 };
 
 let postId = 1;
-const createPost = () =>{}
+const createPost = (title, contents, userId) => {
+  const user = users.find((user) => user.id === userId);
+  if(!user) throw new Error("user not found");
+
+  const newPost = {
+    id: postId++,
+    title,
+    contents,
+    userId,
+  };
+
+  posts.push(newPost);
+  user.posts.push(newPost.id);
+  return newPost;
+};
 
 module.exports = {
   getUsers,
@@ -64,4 +78,5 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
+  createPost,
 };
